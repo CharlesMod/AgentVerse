@@ -325,7 +325,11 @@ agentverse-benchmark --task tasksolving/humaneval/gpt-3.5 --dataset_path data/hu
 To run AgentVerse on a specific problem, you can try
 ```shell
 # Run a single query (config file `agentverse/tasks/tasksolving/brainstorming/gpt-3.5/config.yaml`). The task is specified in the config file.
-agentverse-tasksolving --task tasksolving/brainstorming
+agentverse-tasksolving --task tasksolving/brainstorming.
+
+NOTE: Some users may require an additional --tasks_dir flag in order to correctly resolve file paths.
+Ex:
+agentverse-tasksolving --task tasksolving/brainstorming --tasks_dir "~/AgentVerse/agentverse/tasks"
 ```
 
 To run the tool using cases presented in our paper, i.e., multi-agent using tools such as web browser, Jupyter notebook, bing search, etc., you can first build ToolsServer provided by [XAgent](https://github.com/OpenBMB/XAgent). You can follow their [instruction](https://github.com/OpenBMB/XAgent#%EF%B8%8F-build-and-setup-toolserver) to build and run the ToolServer.
